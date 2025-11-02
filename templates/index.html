@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NarrativeLink - Slave Narrative Research Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NarrativeLink</h1>
+            <p class="subtitle">AI-Powered Research Assistant for Slave Narratives (1789-1909)</p>
+        </header>
+
+        <div class="stats" id="stats">
+            <div class="stat-item">
+                <span class="stat-number" id="narrativeCount">--</span>
+                <span class="stat-label">Narratives</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="authorCount">--</span>
+                <span class="stat-label">Authors</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="yearRange">--</span>
+                <span class="stat-label">Year Range</span>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <h2>Ask a Research Question</h2>
+            <textarea 
+                id="queryInput" 
+                placeholder="Example: Compare how Frederick Douglass and Harriet Jacobs describe family separation..."
+                rows="3"
+            ></textarea>
+            <button id="searchBtn" onclick="search()">Search</button>
+        </div>
+
+        <div id="results" class="results hidden">
+            <h3>Answer</h3>
+            <div id="answer" class="answer"></div>
+            
+            <h3>Sources</h3>
+            <div id="sources" class="sources"></div>
+            
+            <h3>Relevant Passages</h3>
+            <div id="passages" class="passages"></div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <p>Searching narratives...</p>
+        </div>
+
+        <div class="example-questions">
+            <h3>Example Questions</h3>
+            <ul>
+                <li onclick="setQuery(this.textContent)">Which narratives mention literacy as a tool of resistance?</li>
+                <li onclick="setQuery(this.textContent)">How do narrators describe their first realization of being enslaved?</li>
+                <li onclick="setQuery(this.textContent)">What resistance strategies didn't involve escape?</li>
+                <li onclick="setQuery(this.textContent)">Compare male and female narrators' descriptions of family separation</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Built for Cloud Run Hackathon 2025 | 38 Historical Slave Narratives</p>
+        </footer>
+    </div>
+
+    <script>
+        // Load stats on page load
+        fetch('/api/stats')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('narrativeCount').textContent = data.total_narratives;
+                document.getElementById('authorCount').textContent = data.unique_authors;
+                document.getElementById('yearRange').textContent = data.year_range;
+            })
+            .catch(err => console.error('Error loading stats:', err));
+
+        function setQuery(text) {
+            document.getElementById('queryInput').value = text;
+        }
+
+        async function search() {
+            const query = document.getElementById('queryInput').value.trim();
+            
+            if (!query) {
+                alert('Please enter a question');
+                return;
+            }
+
+            // Show loading
+            document.getElementById('loading').classList.remove('hidden');
+            document.getElementById('results').classList.add('hidden');
+            document.getElementById('searchBtn').disabled = true;
+
+            try {
+                const response = await fetch('/api/search', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query })
+                });
+
+                const data = await response.json();
+
+                // Display answer
+                document.getElementById('answer').innerHTML = formatAnswer(data.answer);
+
+                // Display sources
+                const sourcesHTML = data.sources.map(s => 
+                    `<div class="source-item">
+                        <strong>${s.author}</strong> - <em>${s.title}</em> (${s.year})
+                    </div>`
+                ).join('');
+                document.getElementById('sources').innerHTML = sourcesHTML;
+
+                // Display passages
+                const passagesHTML = data.relevant_passages.map(p => 
+                    `<div class="passage-item">
+                        <div class="passage-meta">${p.author} - ${p.title} (${p.year})</div>
+                        <div class="passage-text">${p.text}</div>
+                    </div>`
+                ).join('');
+                document.getElementById('passages').innerHTML = passagesHTML;
+
+                // Show results
+                document.getElementById('results').classList.remove('hidden');
+
+            } catch (error) {
+                alert('Error: ' + error.message);
+            } finally {
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('searchBtn').disabled = false;
+            }
+        }
+
+        function formatAnswer(text) {
+            // Simple markdown-like formatting
+            return text
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/^/, '<p>')
+                .replace(/$/, '</p>');
+        }
+
+        // Allow Enter to search
+        document.getElementById('queryInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                search();
+            }
+        });
+    </script>
+</body>
+</html>

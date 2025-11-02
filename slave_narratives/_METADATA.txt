@@ -1,0 +1,157 @@
+SLAVE NARRATIVES COLLECTION - COMPREHENSIVE METADATA
+======================================================================
+Total narratives: 40
+Date range: 1789-1909
+Collection purpose: Academic research tool
+======================================================================
+
+TIER 1: ESSENTIAL NARRATIVES (Most Famous)
+----------------------------------------------------------------------
+1. Frederick Douglass - Narrative of the Life of Frederick Douglass (1845)
+   Gutenberg ID: 23
+   URL: https://www.gutenberg.org/ebooks/23
+
+2. Harriet Jacobs - Incidents in the Life of a Slave Girl (1861)
+   Gutenberg ID: 11030
+   URL: https://www.gutenberg.org/ebooks/11030
+
+3. Olaudah Equiano - The Interesting Narrative of the Life of Olaudah Equiano (1789)
+   Gutenberg ID: 15399
+   URL: https://www.gutenberg.org/ebooks/15399
+
+4. Solomon Northup - Twelve Years a Slave (1853)
+   Gutenberg ID: 12799
+   URL: https://www.gutenberg.org/ebooks/12799
+
+5. William Wells Brown - Narrative of William W. Brown, a Fugitive Slave (1847)
+   Gutenberg ID: 15513
+   URL: https://www.gutenberg.org/ebooks/15513
+
+6. Harriet Beecher Stowe - Uncle Tom's Cabin (1852)
+   Gutenberg ID: 18567
+   URL: https://www.gutenberg.org/ebooks/18567
+
+7. Frederick Douglass - My Bondage and My Freedom (1855)
+   Gutenberg ID: 10615
+   URL: https://www.gutenberg.org/ebooks/10615
+
+8. Sojourner Truth - Narrative of Sojourner Truth (1850)
+   Gutenberg ID: 10207
+   URL: https://www.gutenberg.org/ebooks/10207
+
+9. Booker T. Washington - Up From Slavery (1901)
+   Gutenberg ID: 10088
+   URL: https://www.gutenberg.org/ebooks/10088
+
+10. Frederick Douglass - Life and Times of Frederick Douglass (1892)
+   Gutenberg ID: 521
+   URL: https://www.gutenberg.org/ebooks/521
+
+
+TIER 2: IMPORTANT NARRATIVES
+----------------------------------------------------------------------
+11. Josiah Henson - The Life of Josiah Henson (1849)
+   Gutenberg ID: 9845
+
+12. Henry Box Brown - Narrative of the Life of Henry Box Brown (1851)
+   Gutenberg ID: 16115
+
+13. Moses Roper - A Narrative of the Adventures and Escape of Moses Roper (1838)
+   Gutenberg ID: 10800
+
+14. William and Ellen Craft - Running a Thousand Miles for Freedom (1860)
+   Gutenberg ID: 15380
+
+15. Austin Steward - Twenty-Two Years a Slave (1857)
+   Gutenberg ID: 22242
+
+16. William Grimes - Life of William Grimes, the Runaway Slave (1825)
+   Gutenberg ID: 13559
+
+17. Lewis Clarke - Narratives of the Sufferings of Lewis and Milton Clarke (1846)
+   Gutenberg ID: 30802
+
+18. Charles Ball - Fifty Years in Chains (1859)
+   Gutenberg ID: 22889
+
+19. James W.C. Pennington - The Fugitive Blacksmith (1849)
+   Gutenberg ID: 17282
+
+20. Elizabeth Keckley - Behind the Scenes (1868)
+   Gutenberg ID: 14449
+
+21. Frederick Douglass - The Heroic Slave (1853)
+   Gutenberg ID: 10615
+
+22. Lydia Maria Child - The Freedmen's Book (1865)
+   Gutenberg ID: 19944
+
+23. Lydia Maria Child - An Appeal in Favor of That Class of Americans Called Africans (1833)
+   Gutenberg ID: 14106
+
+24. Jacob D. Green - Narrative of the Life of J.D. Green, a Runaway Slave (1864)
+   Gutenberg ID: 34936
+
+25. John Brown - Slave Life in Georgia (1855)
+   Gutenberg ID: 29854
+
+
+TIER 3: ADDITIONAL IMPORTANT WORKS
+----------------------------------------------------------------------
+26. Venture Smith - A Narrative of the Life and Adventures of Venture (1798)
+   Gutenberg ID: 10045
+
+27. Thomas H. Jones - The Experience of Thomas H. Jones (1862)
+   Gutenberg ID: 28656
+
+28. Samuel Ringgold Ward - Autobiography of a Fugitive Negro (1855)
+   Gutenberg ID: 16377
+
+29. Isaac Jefferson - Memoirs of a Monticello Slave (1847)
+   Gutenberg ID: 19721
+
+30. Peter Randolph - Sketches of Slave Life (1855)
+   Gutenberg ID: 26617
+
+31. Louis Hughes - Thirty Years a Slave (1897)
+   Gutenberg ID: 37150
+
+32. Francis Fedric - Slave Life in Virginia and Kentucky (1863)
+   Gutenberg ID: 20579
+
+33. James Mars - Life of James Mars, a Slave (1864)
+   Gutenberg ID: 34445
+
+34. John Thompson - The Life of John Thompson, a Fugitive Slave (1856)
+   Gutenberg ID: 26470
+
+35. William Parker - The Freedman's Story (1866)
+   Gutenberg ID: 15076
+
+36. Kate Drumgoold - A Slave Girl's Story (1898)
+   Gutenberg ID: 16220
+
+37. Andrew Jackson - Narrative and Writings of Andrew Jackson (1847)
+   Gutenberg ID: 30072
+
+38. William J. Anderson - Life and Narrative of William J. Anderson (1857)
+   Gutenberg ID: 42936
+
+39. Bethany Veney - The Narrative of Bethany Veney (1889)
+   Gutenberg ID: 29851
+
+40. Annie L. Burton - Memories of Childhood's Slavery Days (1909)
+   Gutenberg ID: 23465
+
+
+======================================================================
+CORPUS STATISTICS
+======================================================================
+Unique authors: 36
+Date range: 1789-1909
+Pre-1850: 12
+1850-1865 (Civil War era): 20
+Post-1865 (Reconstruction+): 8
+
+Women's narratives: ~8
+Men's narratives: ~28
