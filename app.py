@@ -227,7 +227,8 @@ def health():
         'embeddings_available': any('embedding' in c for c in chunks_data)
     })
 
+load_data()
+
 if __name__ == '__main__':
-    load_data()
     port = int(os.environ.get('PORT', 8080))
     app.run(host='0.0.0.0', port=port, debug=False)
