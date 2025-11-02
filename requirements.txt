@@ -2,4 +2,4 @@ flask
 google-generativeai
 gunicorn
 numpy
-dotenv
+python-dotenv
