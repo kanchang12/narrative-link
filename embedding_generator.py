@@ -5,7 +5,7 @@ import time
 from pathlib import Path
 
 # Configure Gemini
-GOOGLE_API_KEY = "AIzaSyCwRjTU7mZKNCqCBp74WIylQnR9Go2DqUE"
+GOOGLE_API_KEY = " "
 if not GOOGLE_API_KEY:
     raise ValueError("GOOGLE_API_KEY environment variable not set")
 
